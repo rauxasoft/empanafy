@@ -29,7 +29,7 @@ explicita	(boolean)
 fechaCreacion	(Date)
 
 
-Genero
+Genero XXXXXX
 ============
 codigo		(int)
 nombre		(String)
