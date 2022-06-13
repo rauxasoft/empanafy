@@ -1,12 +1,20 @@
 package com.sinensia.empanafy.backend.services.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.sinensia.empanafy.backend.model.Cancion;
 import com.sinensia.empanafy.backend.services.CancionServices;
 
 public class CancionServicesImpl implements CancionServices{
 
+	private Map<String, Cancion> MAPA_CANCIONES = new HashMap<>();
+	
+	public CancionServicesImpl() {
+		// TODO Crear alguna canción de ejemplo
+	}
+	
 	@Override
 	public void create(Cancion cancion) {
 		// TODO Auto-generated method stub
@@ -24,5 +32,7 @@ public class CancionServicesImpl implements CancionServices{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

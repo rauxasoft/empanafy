@@ -30,7 +30,4 @@ public class GeneroController {
 		return generoServices.read(codigo);
 	}
 	
-	
-	// http://10.250.18.3:8080/generos
-	// http://10.250.18.3:8080/generos/100
 }
