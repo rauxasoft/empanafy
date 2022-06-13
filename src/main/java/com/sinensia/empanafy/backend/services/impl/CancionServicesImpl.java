@@ -11,6 +11,8 @@ public class CancionServicesImpl implements CancionServices{
 
 	private Map<String, Cancion> MAPA_CANCIONES = new HashMap<>();
 	
+	// ESTA ES LA EVOLUCION DE JORDI
+	
 	public CancionServicesImpl() {
 		// TODO Crear alguna canción de ejemplo
 	}
