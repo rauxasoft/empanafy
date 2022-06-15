@@ -11,10 +11,8 @@ public class CancionServicesImpl implements CancionServices{
 
 	private Map<String, Cancion> MAPA_CANCIONES = new HashMap<>();
 	
-	// ESTA ES LA EVOLUCION DE JORDI
-	
 	public CancionServicesImpl() {
-		// TODO Crear alguna canción de ejemplo
+		init();
 	}
 	
 	@Override
@@ -35,6 +33,33 @@ public class CancionServicesImpl implements CancionServices{
 		return null;
 	}
 
+	private void init() {
+		
+		Cancion cancion1 = new Cancion();
+		Cancion cancion2 = new Cancion();
+		Cancion cancion3 = new Cancion();
+		
+		cancion1.setIsmn("100C");
+		cancion2.setIsmn("200R");
+		cancion3.setIsmn("340H");
+		
+		cancion1.setTitulo("Súbeme la Radio");
+		cancion2.setTitulo("Yellow Submarine");
+		cancion3.setTitulo("EL TicoTico");
+		
+		cancion1.setDuracion(15000);
+		cancion2.setDuracion(69333);
+		cancion3.setDuracion(8993);
+		
+		cancion1.setExplicita(true);
+		cancion2.setExplicita(false);
+		cancion3.setExplicita(false);
+		
+		cancion1.setFechaCreacion(null);
+		cancion2.setFechaCreacion(null);
+		cancion3.setFechaCreacion(null);
+		
+	}
 	
 
 }
