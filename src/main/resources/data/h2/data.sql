@@ -16,35 +16,4 @@ INSERT INTO CANCIONES (ISMN,TITULO,FECHA_CREACION, CODIGO_GENERO, EXPLICITA, DUR
 ('35446332D','SuperExito 2020', '1820-02-22',8,FALSE, 3655),
 ('19234345Q','SuperExito 2021', '1820-02-22',8,FALSE, 55677),
 ('89777934P','Moonlight Sonata', '1820-02-22',8,FALSE, 7833),
-('2673443sQ','Himno del F.C. Barcelona', '1961-02-11',2,FALSE, 5933);
-
-INSERT INTO POKEMONES (NOMBRE) VALUES
-('Snake'),
-('Picatcho');
-
-INSERT INTO PATITOS (NOMBRE_PATITO, COLOR) VALUES
-('Freddy','Rosa'),
-('Krugger','Negro'),
-('Rufus','Azul');
-
-INSERT INTO EQUIPOS (NOMBRE) VALUES
-('F.C. Barcelona'),
-('Real Madrid'),
-('Real Club Deportivo Español'),
-('Atlético de Madrid'),
-('Real Sociedad'),
-('Centro Deportivo Olmedo');
-
-INSERT INTO ALUMNOS (NOMBRE, ORDENADOR) VALUES
-('alumno 1','MAC'),
-('alumno 2','PC'),
-('alumno 3','PC'),
-('alumno 4','PC'),
-('alumno 5','PC'),
-('alumno 6','MAC'),
-('alumno 7','IBM'),
-('alumno 8','MAC'),
-('alumno 9','PC'),
-('alumno 10','PC'),
-('alumno 11','PC'),
-('alumno 12','MAC');
+('26734432Q','Himno del F.C. Barcelona', '1961-02-11',2,FALSE, 5933);
