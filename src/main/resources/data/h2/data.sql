@@ -1,3 +1,8 @@
+INSERT INTO INCIDENCIAS(CODIGO, FECHA, OBSERVACIONES) VALUES
+(1000,'2020-10-22','Se colgó el Eclipse.'),
+(1001,'2020-10-23','Se colgó el ordenador.'),
+(1002,'2020-10-24','Fallo en el ascensor.');
+
 INSERT INTO GENEROS(CODIGO, NAME, OBSERVACIONES) VALUES
 (1,'FUNK',null),
 (2,'ACOUSTIC','Propuesto por Abdoulaye'),
