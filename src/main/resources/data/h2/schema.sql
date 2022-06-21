@@ -1,3 +1,18 @@
+CREATE TABLE PRODUCTOS(
+
+	CODIGO				 	BIGINT			NOT NULL,
+	NOMBRE					VARCHAR(150)	,
+	FAMILIA					VARCHAR(30)		,
+	PRECIO					DOUBLE			,
+	DESCATALOGADO			BOOLEAN			,
+	FECHA_ALTA				DATE			,
+	
+	PRIMARY KEY(CODIGO)
+
+);
+
+-- ***************************************************************
+
 CREATE TABLE VEHICULOS(
 
 	MATRICULA				VARCHAR(20)		NOT NULL,
