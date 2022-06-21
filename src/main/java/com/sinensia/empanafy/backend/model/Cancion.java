@@ -2,14 +2,37 @@ package com.sinensia.empanafy.backend.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+@Entity
+@Table(name="CANCIONES")
 public class Cancion {
 
+	@Id
 	private String ismn;
+	
 	private String titulo;
+	
+	@Temporal(TemporalType.DATE)
 	private Date fechaCreacion;
+	
+	@Transient
 	private Interprete interprete;
+	
+	@Transient
 	private Compositor compositor;
+	
+	@ManyToOne
+	@JoinColumn(name="CODIGO_GENERO")
 	private Genero genero;
+	
 	private boolean explicita;
 	private int duracion;
 	

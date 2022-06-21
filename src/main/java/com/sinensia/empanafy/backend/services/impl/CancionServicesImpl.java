@@ -9,7 +9,7 @@ import com.sinensia.empanafy.backend.services.CancionServices;
 
 public class CancionServicesImpl implements CancionServices{
 
-	private Map<String, Cancion> MAPA_CANCIONES = new HashMap<>();
+	
 	
 	public CancionServicesImpl() {
 		init();
