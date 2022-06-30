@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "935d3637-25b4-432b-9cd7-a5213f7eff73",
+		"name": "Batería de pruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "peticion_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/saludo",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"saludo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peticion_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/pruebas/clientes?estado=activo",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"pruebas",
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "activo"
+						},
+						{
+							"key": "provincia",
+							"value": "tarragona",
+							"disabled": true
+						},
+						{
+							"key": "moroso",
+							"value": "true",
+							"description": "Los que no pagan...",
+							"disabled": true
+						},
+						{
+							"key": "simpaticos",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peticion_3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Pepín Gálvez Ridruejo",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/crearpersona",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"crearpersona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peticion_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/generos",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"generos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peticion_5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": 565336,\r\n    \"nombre\": \"FUNK_JORDI\",\r\n    \"observaciones\": \"Creado desde Postman haciendo pruebas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/generos",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"generos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peticion_6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/generos/565336",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"generos",
+						"565336"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "peticion_7",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\": 1,\r\n    \"nombre\": \"FUNK_EDITADO_POR_JORDI_EN_POSTMAN\",\r\n    \"observaciones\": \"Observaciones de Jordi en POSTMAN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{puerto}}/generos",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"generos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
