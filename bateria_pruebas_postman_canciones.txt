@@ -1,0 +1,27 @@
+Crear una batería (una colección) de pruebas en postman para gestionar canciones.
+
+http://10.250.18.2:8080/canciones
+
+1.- Obtener un listado de todas las canciones
+
+GET 	/canciones
+
+2.- Obtener una canción a partir de su código
+
+GET 	/canciones/{ismn}
+
+3.- Crear una canción
+
+POST	/canciones
+
+* nueva canción JSON en el body
+
+4.- Eliminar una canción
+
+DELETE	/canciones/{ismn}
+
+5.- Actualizar una canción
+
+PUT		/canciones/
+
+* canción a editar como JSON en el body
