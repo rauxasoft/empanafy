@@ -45,10 +45,10 @@ public class GeneroController {
 		boolean existe = generoRepository.existsById(codigo);
 		
 		if(!existe) {
-			System.out.println(request.getRemoteAddr() + " se dispone a eliminar la canción con código " + codigo + " que NO EXISTE!!!!!");
+			System.out.println(request.getRemoteAddr() + " se dispone a eliminar el género con código " + codigo + " que NO EXISTE!!!!!");
 			return ResponseEntity.notFound().build();
 		} else {
-			System.out.println(request.getRemoteAddr() + " se dispone a eliminar la canción con código " + codigo);
+			System.out.println(request.getRemoteAddr() + " se dispone a eliminar el género con código " + codigo);
 			generoRepository.deleteById(codigo);
 			return ResponseEntity.noContent().build();
 		}
