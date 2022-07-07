@@ -1,8 +1,3 @@
-
-
-
-
-
 CREATE TABLE EQUIPOS(
 
 	CODIGO					BIGINT			NOT NULL,

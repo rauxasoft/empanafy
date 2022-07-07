@@ -39,4 +39,10 @@ INSERT INTO PRODUCTOS (CODIGO, NOMBRE, FAMILIA, PRECIO, DESCATALOGADO) VALUES
 (100,'Impresora Laser HP 2p','HARDWARE',350.5,FALSE),
 (101,'Ordenador desktop LACER D-20','HARDWARE',350.0,TRUE),
 (102,'Avant Antivirus v.2','SOFTWARE',40.0,FALSE),
-(103,'Estuche ratón (madera)','CONSUMIBLE',470.0,FALSE);
+(103,'Funda Portátil 220 * 10 (negra)','CONSUMIBLE',80.0,FALSE),
+(104,'Funda Portátil 220 * 10 (roja)','CONSUMIBLE',107.0,FALSE),
+(105,'Funda Portátil 220 * 10 (verde)','CONSUMIBLE',102.0,FALSE),
+(106,'Funda Portátil 220 * 10 (azul)','CONSUMIBLE',105.0,FALSE),
+(107,'Avant Antivirus v.7','SOFTWARE',70.0,FALSE),
+(108,'Fundation Software EDITION','SOFTWARE',102.0,FALSE),
+(109,'Estuche ratón (madera)','CONSUMIBLE',470.0,FALSE);
