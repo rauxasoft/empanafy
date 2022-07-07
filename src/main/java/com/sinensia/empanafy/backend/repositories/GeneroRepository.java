@@ -13,4 +13,7 @@ public interface GeneroRepository extends JpaRepository<Genero, Integer>{
 	List<Genero> findByObservacionesNotNull();
 	List<Genero> findByObservacionesNull();
 	
+//	@Query(value="SELECT (NAME, OBSERVACIONES) FROM GENEROS",nativeQuery = true)
+//	List<Genero> dameGenerosUsandoSQLDeTodaLaVida();
+	
 }
