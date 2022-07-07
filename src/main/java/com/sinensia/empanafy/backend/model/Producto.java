@@ -1,20 +1,16 @@
 package com.sinensia.empanafy.backend.model;
 
-/*
- 
- {
-    "codigo": 24000,
-    "nombre":"Impresora Laser 2p",
-    "precio": 250.0,
-    "descatalogado": false,
-    "familia": "SOFTWARE"
-}
- 
- */
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="PRODUCTOS")
 public class Producto {
 
+	@Id
 	private Integer codigo;
+	
 	private String nombre;
 	private double precio;
 	private boolean descatalogado;

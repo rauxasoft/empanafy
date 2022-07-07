@@ -24,7 +24,8 @@ public class ClienteController {
 	//* PATCH		/clientes/{id}   				- para actualizar el clientes con id "id" cambiando los datos que se indican en el body
 
 	@PatchMapping("/clientes/{id}")
-	public Cliente actualizarNombre(@RequestBody Cliente clienteActualizar,  @PathVariable String id) {
+	public Cliente actualizarNombre(@RequestBody Cliente clienteActualizar,  
+			                        @PathVariable String id) {
 		
 		// Como no tenemos base de datos vamos a "engañar" haciendo ver que el cliente con el código existe.ç
 		// Simplemente le vamos a poner el nombre que nos llega y lo vamos a devolver tal cual...
