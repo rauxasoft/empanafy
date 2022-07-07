@@ -18,10 +18,11 @@ public class PruebasGeneroRepositoryController {
 	@GetMapping("/test")
 	public List<Genero> getGeneros(){
 		
-		List<Genero> generos = generoRepository.findAll();
-	//	List<Genero> generos = generoRepository.findAll();
-	//	List<Genero> generos = generoRepository.findAll();
-	//	List<Genero> generos = generoRepository.findAll();
+		List<Genero> generos = generoRepository.findByObservacionesNull();
+		// List<Genero> generos = generoRepository.findByObservacionesNotNull();
+		// List<Genero> generos = generoRepository.findByNombreContainsIgnoringCaseOrderByNombre("a");
+		// List<Genero> generos = generoRepository.findByNombreStartsWithIgnoringCase("s");
+		// List<Genero> generos = generoRepository.findAll();
 		
 		return generos;
 	}
