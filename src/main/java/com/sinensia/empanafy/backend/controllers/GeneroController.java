@@ -26,29 +26,25 @@ public class GeneroController {
 	
 	@GetMapping("/generos")
 	public List<Genero> getAll(HttpServletRequest request){
-		System.out.println(request.getRemoteAddr());
 		return generoRepository.findAll();
 	}
 	
 	@PostMapping("/generos")
 	@Transactional
-	public Genero createGenero(@RequestBody Genero genero, HttpServletRequest request){
-		System.out.println(request.getRemoteAddr() + " va a crear el genero: " + genero);
+	public Genero createGenero(@RequestBody Genero genero){
 		generoRepository.save(genero);
 		return genero;
 	}
 	
 	@DeleteMapping("/generos/{codigo}")
 	@Transactional
-	public ResponseEntity<?> deleteGenero(@PathVariable Integer codigo, HttpServletRequest request) {
+	public ResponseEntity<?> deleteGenero(@PathVariable Integer codigo) {
 		
 		boolean existe = generoRepository.existsById(codigo);
 		
 		if(!existe) {
-			System.out.println(request.getRemoteAddr() + " se dispone a eliminar el género con código " + codigo + " que NO EXISTE!!!!!");
 			return ResponseEntity.notFound().build();
 		} else {
-			System.out.println(request.getRemoteAddr() + " se dispone a eliminar el género con código " + codigo);
 			generoRepository.deleteById(codigo);
 			return ResponseEntity.noContent().build();
 		}
@@ -56,11 +52,9 @@ public class GeneroController {
 	
 	@PutMapping("/generos")
 	@Transactional
-	public ResponseEntity<?> update(@RequestBody Genero genero, HttpServletRequest request){
+	public ResponseEntity<?> update(@RequestBody Genero genero){
 		
 		boolean existe = generoRepository.existsById(genero.getCodigo());
-		
-		System.out.println(request.getRemoteAddr() + " quiere actualizar el genero " + genero.getCodigo());
 		
 		if (!existe) {
 			return ResponseEntity.notFound().build();
