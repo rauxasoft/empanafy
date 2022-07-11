@@ -1,4 +1,4 @@
-package com.sinensia.empanafy.backend.controllers;
+package com.sinensia.empanafy.pruebas.backend.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 

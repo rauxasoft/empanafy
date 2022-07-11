@@ -1,10 +1,10 @@
-package com.sinensia.empanafy.backend.repositories;
+package com.sinensia.empanafy.pruebas.backend.repositories;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sinensia.empanafy.backend.model.Producto;
+import com.sinensia.empanafy.pruebas.backend.model.Producto;
 
 public interface ProductoRepository extends JpaRepository<Producto,Integer>{
 

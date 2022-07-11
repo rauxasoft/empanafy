@@ -1,4 +1,4 @@
-package com.sinensia.empanafy.backend.model;
+package com.sinensia.empanafy.pruebas.backend.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

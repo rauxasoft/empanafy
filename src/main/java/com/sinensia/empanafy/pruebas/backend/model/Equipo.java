@@ -1,4 +1,4 @@
-package com.sinensia.empanafy.backend.model;
+package com.sinensia.empanafy.pruebas.backend.model;
 
 import java.io.Serializable;
 import java.util.Objects;

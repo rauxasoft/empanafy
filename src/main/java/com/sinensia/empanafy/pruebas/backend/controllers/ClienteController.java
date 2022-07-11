@@ -1,4 +1,4 @@
-package com.sinensia.empanafy.backend.controllers;
+package com.sinensia.empanafy.pruebas.backend.controllers;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sinensia.empanafy.backend.model.Cliente;
+import com.sinensia.empanafy.pruebas.backend.model.Cliente;
 
 @RestController
 public class ClienteController {

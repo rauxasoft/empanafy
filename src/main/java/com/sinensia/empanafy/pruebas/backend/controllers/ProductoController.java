@@ -1,4 +1,4 @@
-package com.sinensia.empanafy.backend.controllers;
+package com.sinensia.empanafy.pruebas.backend.controllers;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sinensia.empanafy.backend.model.Producto;
-import com.sinensia.empanafy.backend.repositories.ProductoRepository;
+import com.sinensia.empanafy.pruebas.backend.model.Producto;
+import com.sinensia.empanafy.pruebas.backend.repositories.ProductoRepository;
 
 @RestController
 public class ProductoController {
