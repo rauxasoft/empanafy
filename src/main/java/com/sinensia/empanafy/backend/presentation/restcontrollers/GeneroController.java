@@ -1,4 +1,4 @@
-package com.sinensia.empanafy.backend.controllers;
+package com.sinensia.empanafy.backend.presentation.restcontrollers;
 
 import java.util.List;
 

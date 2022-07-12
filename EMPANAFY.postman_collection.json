@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "1be0a016-fad7-4342-b5fb-9c90c2b2ff38",
+		"name": "EMPANAFY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Canciones",
+			"item": [
+				{
+					"name": "actualizar una canción",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ismn\": \"11434487T\",\r\n    \"titulo\": \"Mediterraneo EDITADO\",\r\n    \"fechaCreacion\": \"1975-01-01\",\r\n    \"interprete\": null,\r\n    \"compositor\": null,\r\n    \"genero\": {\r\n        \"codigo\": 6\r\n    },\r\n    \"explicita\": false,\r\n    \"duracion\": 5555\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{puerto}}/canciones",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"canciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar una canción a partir de su código ISMN",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{puerto}}/canciones/11434487T",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"canciones",
+								"11434487T"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear canción",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ismn\": \"11434487T\",\r\n    \"titulo\": \"Mediterraneo\",\r\n    \"fechaCreacion\": \"1972-01-01\",\r\n    \"interprete\": null,\r\n    \"compositor\": null,\r\n    \"genero\": {\r\n        \"codigo\": 5\r\n    },\r\n    \"explicita\": false,\r\n    \"duracion\": 3700\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{puerto}}/canciones",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"canciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener una canción a partir de su código ISMN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{puerto}}/canciones/83244345T",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"canciones",
+								"83244345T"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todas las canciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{puerto}}/canciones",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"canciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generos",
+			"item": []
+		},
+		{
+			"name": "Compositores",
+			"item": [
+				{
+					"name": "Listado de todos los compositores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/compositores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compositores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener compositor a partir de su código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/compositores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compositores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear compositor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 600,\r\n    \"nombre\": \"Yushi Kitano\",\r\n    \"nacionalidad\": \"Japón\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/compositores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compositores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Interpretes",
+			"item": [
+				{
+					"name": "Listado de todos los interpretes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interpretes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interpretes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener interprete a partir de su código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/interpretes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interpretes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear interprete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 2000,\r\n    \"nombre\": \"Postman\",\r\n    \"nacionalidad\": \"Francia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/interpretes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"interpretes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

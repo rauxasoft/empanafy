@@ -5,6 +5,13 @@ INSERT INTO COMPOSITORES(CODIGO, NOMBRE, NACIONALIDAD) VALUES
 (4,'Nacho Cano','España'),
 (5,'Giorgio Moroder', 'Italia');
 
+INSERT INTO INTERPRETES(CODIGO, NOMBRE, NACIONALIDAD) VALUES
+(1,'Pablo Donoso','Mexico'),
+(2,'Carla Brunna','Italia'),
+(3,'Walter O','EEUU'),
+(4,'Wendy Díaz','Puerto Rico'),
+(5,'Walter Peralta','Mexico');
+
 INSERT INTO GENEROS(CODIGO, NAME, OBSERVACIONES) VALUES
 (1,'FUNK',null),
 (2,'ACOUSTIC','Propuesto por Abdoulaye'),
