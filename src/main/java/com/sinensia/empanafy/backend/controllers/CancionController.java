@@ -36,9 +36,7 @@ public class CancionController {
 	@PostMapping("/canciones")
 	@Transactional
 	public Cancion createCancion(@RequestBody Cancion cancion, HttpServletRequest request){
-		System.out.println(request.getRemoteAddr() + " va a crear la canción: " + cancion);
-		cancionRepository.save(cancion);
-		return cancion;
+		return cancionRepository.save(cancion);
 	}
 	
 	@DeleteMapping("/canciones/{ismn}")
@@ -48,10 +46,8 @@ public class CancionController {
 		boolean existe = cancionRepository.existsById(codigo);
 		
 		if(!existe) {
-			System.out.println(request.getRemoteAddr() + " se dispone a eliminar la canción con código " + codigo + " que NO EXISTE!!!!!");
 			return ResponseEntity.notFound().build();
 		} else {
-			System.out.println(request.getRemoteAddr() + " se dispone a eliminar la canción con código " + codigo);
 			cancionRepository.deleteById(codigo);
 			return ResponseEntity.noContent().build();
 		}
@@ -62,8 +58,6 @@ public class CancionController {
 	public ResponseEntity<?> update(@RequestBody Cancion cancion, HttpServletRequest request){
 		
 		boolean existe = cancionRepository.existsById(cancion.getIsmn());
-		
-		System.out.println(request.getRemoteAddr() + " quiere actualizar la canción " + cancion.getIsmn());
 		
 		if (!existe) {
 			return ResponseEntity.notFound().build();

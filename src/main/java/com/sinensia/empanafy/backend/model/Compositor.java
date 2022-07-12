@@ -1,8 +1,16 @@
 package com.sinensia.empanafy.backend.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="COMPOSITORES")
 public class Compositor {
 
-	private int codigo;
+	@Id
+	private Integer codigo;
+	
 	private String nombre;
 	private String nacionalidad;
 	
@@ -10,11 +18,11 @@ public class Compositor {
 		
 	}
 
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 

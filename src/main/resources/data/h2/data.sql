@@ -1,3 +1,10 @@
+INSERT INTO COMPOSITORES(CODIGO, NOMBRE, NACIONALIDAD) VALUES
+(1,'Robert Preston', 'EEUU'),
+(2,'William Sorento', 'EEUU'),
+(3,'Philippe Cocu', 'Francia'),
+(4,'Nacho Cano','España'),
+(5,'Giorgio Moroder', 'Italia');
+
 INSERT INTO GENEROS(CODIGO, NAME, OBSERVACIONES) VALUES
 (1,'FUNK',null),
 (2,'ACOUSTIC','Propuesto por Abdoulaye'),
