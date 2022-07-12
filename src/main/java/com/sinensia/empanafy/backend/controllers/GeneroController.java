@@ -32,8 +32,7 @@ public class GeneroController {
 	@PostMapping("/generos")
 	@Transactional
 	public Genero createGenero(@RequestBody Genero genero){
-		generoRepository.save(genero);
-		return genero;
+		return generoRepository.save(genero);
 	}
 	
 	@DeleteMapping("/generos/{codigo}")
@@ -62,7 +61,7 @@ public class GeneroController {
 			Genero generoToUpdate = generoRepository.findById(genero.getCodigo()).orElse(null);
 			generoToUpdate.setNombre(genero.getNombre());
 			generoToUpdate.setObservaciones(genero.getObservaciones());
-			generoRepository.flush();
+			//generoRepository.flush();
 			return ResponseEntity.noContent().build();
 		}
 		
