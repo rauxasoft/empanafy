@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Genero {
 
 	@Id
-	private int codigo;
+	private Integer codigo;
 	
 	@Column(name="NAME")
 	private String nombre;
@@ -21,11 +21,11 @@ public class Genero {
 		
 	}
 
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 

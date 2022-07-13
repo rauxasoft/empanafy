@@ -1,0 +1,17 @@
+Repositorio del proyecto en su última versión...
+
+
+https://github.com/rauxasoft/empanafy
+
+
+* Para hacer un clon del reposotio tenemos que...
+
+1.- Situarnos en la carpeta C:/DESARROLLO_BACKEND
+2.- git clone https://github.com/rauxasoft/empanafy
+3.- Desde Eclipse tenemos que importar "existing Maven Project"
+4.- Para ejecutarlo: Run -> Run As -> "spring boot application"
+
+* Para traernos las últimas novedades del proyecto:
+
+1.- Cerrar Eclipse
+2.- Desde la carpeta del proyecto escribiremos: git pull

@@ -6,6 +6,8 @@
 	<title>Empanafy</title>
 </head>
 <body>
-	<h2>Bienvenidos a Empanafy!</h2>
+	<h2>Numeros</h2>
+	<p>Número aleatorio 1: ${number1} </p>
+	<p>Número aleatorio 2: ${number2} </p>
 </body>
 </html>
