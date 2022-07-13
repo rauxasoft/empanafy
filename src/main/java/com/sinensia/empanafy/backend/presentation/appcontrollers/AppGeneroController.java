@@ -10,7 +10,7 @@ import com.sinensia.empanafy.backend.model.Genero;
 import com.sinensia.empanafy.backend.repositories.GeneroRepository;
 
 @Controller
-public class GenerosController {
+public class AppGeneroController {
 
 	@Autowired
 	private GeneroRepository generoRepository;
