@@ -9,7 +9,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name="CANCIONES")
@@ -23,10 +22,12 @@ public class Cancion {
 	@Temporal(TemporalType.DATE)
 	private Date fechaCreacion;
 	
-	@Transient
+	@ManyToOne
+	@JoinColumn(name="CODIGO_INTERPRETE")
 	private Interprete interprete;
 	
-	@Transient
+	@ManyToOne
+	@JoinColumn(name="CODIGO_COMPOSITOR")
 	private Compositor compositor;
 	
 	@ManyToOne

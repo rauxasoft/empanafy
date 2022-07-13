@@ -17,17 +17,17 @@ public class AppGeneroController {
 	
 	@GetMapping("/empanafy/generos/{codigo}")
 	public ModelAndView getPaginaFichaGenero(@PathVariable Integer codigo) {
-		
 		ModelAndView mav = new ModelAndView();
+		Genero genero = generoRepository.findById(codigo).orElse(null);  
+		mav.setViewName("ficha-genero");								 
+		mav.addObject("genero", genero);								 
+		return mav;
+	}
 	
-		// 1.- Hemos de obtener el modelo (el género por el que nos están preguntando)
-		// 2.- Hemos de resolver cuál es la vista
-		// 3.- Hemos de "adjuntar" nuestro modelo (el género) a la vista para hacerselo llegar
-		
-		Genero genero = generoRepository.findById(codigo).orElse(null);  // 1
-		mav.setViewName("ficha-genero");								 // 2
-		mav.addObject("genero", genero);								 // 3
-		
+	@GetMapping("/empanafy/generos")
+	public ModelAndView listadoGeneros() {
+		ModelAndView mav = new ModelAndView("generos");
+		mav.addObject("generos", generoRepository.findAll());
 		return mav;
 	}
 

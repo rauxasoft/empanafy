@@ -7,8 +7,8 @@
 	<title>Empanafy</title>
 </head>
 <body>
+	<jsp:include page="header.jsp"/>
 	<h2>Listado de Géneros</h2>
-	<hr>
 	<table>
 		<thead>
 			<tr>

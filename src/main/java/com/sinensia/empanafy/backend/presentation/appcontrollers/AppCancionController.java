@@ -17,13 +17,18 @@ public class AppCancionController {
 	
 	@GetMapping("/empanafy/canciones/{ismn}")
 	public ModelAndView getPaginaFichaCancion(@PathVariable String ismn) {
-		
 		ModelAndView mav = new ModelAndView();
-		
 		Cancion cancion = cancionRepository.findById(ismn).orElse(null);
 		mav.setViewName("ficha-cancion");
 		mav.addObject("cancion", cancion);
-	
 		return mav;
 	}
+	
+	@GetMapping("/empanafy/canciones")
+	public ModelAndView listadoCanciones() {
+		ModelAndView mav = new ModelAndView("canciones");
+		mav.addObject("canciones", cancionRepository.findAll());
+		return mav;
+	}
+	
 }
