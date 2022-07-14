@@ -15,6 +15,13 @@ public class AppCompositorController {
 	@Autowired
 	private CompositorRepository compositorRepository;
 	
+	@GetMapping("/empanafy/compositores")
+	public ModelAndView getListaCompositores() {
+		ModelAndView mav = new ModelAndView("compositores");
+		mav.addObject("compositores", compositorRepository.findAll());
+		return mav;
+	}
+	
 	@GetMapping("/empanafy/compositores/{codigo}")
 	public ModelAndView getPaginaFichaCompositor(@PathVariable Integer codigo) {
 		
