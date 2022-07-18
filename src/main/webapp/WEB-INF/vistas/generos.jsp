@@ -7,25 +7,27 @@
 	<title>Empanafy</title>
 </head>
 <body>
-	<jsp:include page="header.jsp"/>
-	<h2>Listado de Géneros</h2>
-	<table>
-		<thead>
-			<tr>
-				<th>Código</th>
-				<th>Nombre</th>
-				<th>Observaciones</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="genero" items="${generos}">
-			<tr>
-				<td>${genero.codigo}</td>
-				<td>${genero.nombre}</td>
-				<td>${genero.observaciones}</td>
-			</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+	<div>
+		<jsp:include page="header.jsp"/>
+		<h2>Listado de Géneros</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Nombre</th>
+					<th>Observaciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="genero" items="${generos}">
+				<tr>
+					<td>${genero.codigo}</td>
+					<td>${genero.nombre}</td>
+					<td>${genero.observaciones}</td>
+				</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
