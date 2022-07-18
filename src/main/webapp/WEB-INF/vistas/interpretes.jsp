@@ -5,27 +5,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Empanafy</title>
+	<jsp:include page="estilosbootstrap.jsp"/>
 </head>
 <body>
-	<jsp:include page="header.jsp"/>
-	<h2>Listado de Interpretes</h2>
-	<table>
-		<thead>
-			<tr>
-				<th>Código</th>
-				<th>Nombre</th>
-				<th>Nacionalidad</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="interprete" items="${interpretes}">
-			<tr>
-				<td>${interprete.codigo}</td>
-				<td>${interprete.nombre}</td>
-				<td>${interprete.nacionalidad}</td>
-			</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+	<div class="container">
+		<jsp:include page="header.jsp"/>
+		<h2>Listado de Interpretes</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Nombre</th>
+					<th>Nacionalidad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="interprete" items="${interpretes}">
+				<tr>
+					<td>${interprete.codigo}</td>
+					<td>${interprete.nombre}</td>
+					<td>${interprete.nacionalidad}</td>
+				</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

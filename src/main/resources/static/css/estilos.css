@@ -1,0 +1,58 @@
+/* SOY UN COMENTARIO EN CSS */
+
+/* Selectores de tags de HTML5 */
+
+table.customTable {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #423CF8;
+  border-style: solid;
+  color: #3877F5;
+}
+
+table.customTable td, table.customTable th {
+  border-width: 2px;
+  border-color: #423CF8;
+  border-style: solid;
+  padding: 5px;
+}
+
+table.customTable thead {
+  background-color: #1423F8;
+}
+
+h1{
+	background-color: orange;
+	color: white;
+}
+
+h2 {
+	background-color: blue;
+	color: gray;
+}
+
+h3, h4, h5, table{
+	background-color: black;
+	color:white;
+}
+
+p {
+	background-color: aqua;
+}
+
+
+#idP3{
+	background-color: olive;
+	padding: 5px;
+}
+
+.cool {
+	background-color: pink;
+	color: orange;
+}
+
+
+
+
