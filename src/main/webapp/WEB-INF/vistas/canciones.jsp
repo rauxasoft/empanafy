@@ -14,12 +14,13 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Código Ismn</th>
+					<th>Código ISMN</th>
 					<th>Título</th>
 					<th>Genero</th>
 					<th>Fecha de Creación</th>
 					<th>Duración</th>
 					<th>Explícita</th>
+					<th>Ver ficha</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -31,6 +32,7 @@
 					<td>${cancion.fechaCreacion}</td>
 					<td>${cancion.duracion}</td>
 					<td>${cancion.explicita}</td>
+					<td><a href="/empanafy/canciones/${cancion.ismn}">ver</a></td>
 				</tr>
 				</c:forEach>
 			</tbody>

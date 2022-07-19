@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sinensia.empanafy.backend.model.Genero;
@@ -25,13 +24,4 @@ public class AppGeneroController {
 		return mav;
 	}
 	
-	@GetMapping("/empanafy/generos/{codigo}")
-	public ModelAndView getPaginaFichaGenero(@PathVariable Integer codigo) {
-		ModelAndView mav = new ModelAndView();
-		Genero genero = generoRepository.findById(codigo).orElse(null);  
-		mav.setViewName("ficha-genero");								 
-		mav.addObject("genero", genero);								 
-		return mav;
-	}
-
 }

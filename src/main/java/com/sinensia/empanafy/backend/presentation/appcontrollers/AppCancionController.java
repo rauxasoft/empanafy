@@ -1,5 +1,8 @@
 package com.sinensia.empanafy.backend.presentation.appcontrollers;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,19 +18,32 @@ public class AppCancionController {
 	@Autowired
 	private CancionRepository cancionRepository;
 	
-	@GetMapping("/empanafy/canciones/{ismn}")
-	public ModelAndView getPaginaFichaCancion(@PathVariable String ismn) {
-		ModelAndView mav = new ModelAndView();
-		Cancion cancion = cancionRepository.findById(ismn).orElse(null);
-		mav.setViewName("ficha-cancion");
-		mav.addObject("cancion", cancion);
+	@GetMapping("/empanafy/canciones")
+	public ModelAndView listadoCanciones() {
+		
+		List<Cancion> canciones = cancionRepository.findAll();
+		ModelAndView mav = new ModelAndView("canciones");
+		mav.addObject("canciones", canciones);
+		
 		return mav;
 	}
 	
-	@GetMapping("/empanafy/canciones")
-	public ModelAndView listadoCanciones() {
-		ModelAndView mav = new ModelAndView("canciones");
-		mav.addObject("canciones", cancionRepository.findAll());
+	@GetMapping("/empanafy/canciones/{ismn}")
+	public ModelAndView fichaCancion(@PathVariable String ismn) {
+		
+//		Cancion cancion = cancionRepository.findById(ismn).orElse(null);
+		
+		Optional<Cancion> optional = cancionRepository.findById(ismn);
+		
+		Cancion cancion = null;
+		
+		if(optional.isPresent()) {
+			cancion = optional.get();
+		}
+		
+		ModelAndView mav = new ModelAndView("ficha-cancion");
+		mav.addObject("song", cancion);
+		
 		return mav;
 	}
 	
