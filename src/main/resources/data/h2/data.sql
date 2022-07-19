@@ -1,9 +1,9 @@
-INSERT INTO COMPOSITORES(CODIGO, NOMBRE, NACIONALIDAD) VALUES
-(1,'Robert Preston', 'EEUU'),
-(2,'William Sorento', 'EEUU'),
-(3,'Philippe Cocu', 'Francia'),
-(4,'Nacho Cano','España'),
-(5,'Giorgio Moroder', 'Italia');
+INSERT INTO COMPOSITORES(CODIGO, NOMBRE, NACIONALIDAD, FECHA_NACIMIENTO) VALUES
+(1,'Robert Preston', 'EEUU', null),
+(2,'William Sorento', 'EEUU', '1951-10-23'),
+(3,'Philippe Cocu', 'Francia', '1922-03-14'),
+(4,'Nacho Cano','España', '1964-01-09'),
+(5,'Giorgio Moroder', 'Italia', '1952-05-25');
 
 INSERT INTO INTERPRETES(CODIGO, NOMBRE, NACIONALIDAD) VALUES
 (1,'Pablo Donoso','Mexico'),

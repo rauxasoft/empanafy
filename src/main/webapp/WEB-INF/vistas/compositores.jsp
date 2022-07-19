@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +18,7 @@
 					<th>Código</th>
 					<th>Nombre</th>
 					<th>Nacionalidad</th>
+					<th>Fecha de Nacimiento</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,6 +27,7 @@
 					<td>${compositor.codigo}</td>
 					<td>${compositor.nombre}</td>
 					<td>${compositor.nacionalidad}</td>
+					<td><fmt:formatDate pattern="dd/MM/yyyy" value="${compositor.fechaNacimiento}"/></td>
 				</tr>
 				</c:forEach>
 			</tbody>

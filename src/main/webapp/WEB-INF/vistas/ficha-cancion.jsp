@@ -30,7 +30,7 @@
 						</tr>
 						<tr>
 							<th>Género</th>
-							<td>${song.genero.nombre} (código ${song.genero.codigo})</td>
+							<td>${song.genero.nombre}  ${song.genero.observaciones}</td>
 						</tr>
 						<tr>
 							<th>Intérprete</th>

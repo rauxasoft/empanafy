@@ -1,8 +1,12 @@
 package com.sinensia.empanafy.backend.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="COMPOSITORES")
@@ -13,6 +17,9 @@ public class Compositor {
 	
 	private String nombre;
 	private String nacionalidad;
+	
+	@Temporal(TemporalType.DATE)
+	private Date fechaNacimiento;
 	
 	public Compositor() {
 		
@@ -41,10 +48,19 @@ public class Compositor {
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
+	
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
 
 	@Override
 	public String toString() {
-		return "Compositor [codigo=" + codigo + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad + "]";
+		return "Compositor [codigo=" + codigo + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad
+				+ ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
 
 }
