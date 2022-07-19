@@ -5,11 +5,12 @@
 		<meta charset="UTF-8">
 		<title>Empanafy</title>
 		<jsp:include page="estilosbootstrap.jsp"/>
+		<link href="/css/estilos.css" rel="stylesheet">  <!-- PARA UTILIZAR PROPIOS ESTILOS -->
 	</head>
 	<body>
 		<div class="container">
 			<jsp:include page="header.jsp"/>
-			<h2>Ficha de Canción</h2>
+			<h2 class="bonito">Ficha de Canción</h2>
 			
 			<p>ISMN: ${song.ismn}</p>
 			<p>${song.titulo}</p>
