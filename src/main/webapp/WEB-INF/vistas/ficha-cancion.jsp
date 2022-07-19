@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,13 +11,42 @@
 	<body>
 		<div class="container">
 			<jsp:include page="header.jsp"/>
-			<h2 class="bonito">Ficha de Canción</h2>
+			<h2>Ficha de Canción</h2>
+			<article>
+				<header>${song.titulo}</header>
+				<section>
+					<table class="table">
+						<tr>
+							<th>Código ISMN</th>
+							<td>${song.ismn}</td>
+						</tr>
+						<tr>
+							<th>Fecha de Creación</th>
+							<td>${song.fechaCreacion}</td>
+						</tr>
+						<tr>
+							<th>Duración (segundos)</th>
+							<td>${song.duracion}</td>
+						</tr>
+						<tr>
+							<th>Género</th>
+							<td>${song.genero.nombre} (código ${song.genero.codigo})</td>
+						</tr>
+						<tr>
+							<th>Intérprete</th>
+							<td>${song.interprete.nombre} (${song.interprete.nacionalidad})</td>
+						</tr>
+						<tr>
+							<th>Compositor</th>
+							<td>${song.compositor.nombre} (${song.compositor.nacionalidad})</td>
+						</tr>
+					</table>
+				</section>
+				<footer>
+					<c:if test="${song.explicita}"><span>EXPLICITA!</span></c:if>
+				</footer>
+			</article>
 			
-			<p>ISMN: ${song.ismn}</p>
-			<p>${song.titulo}</p>
-			<p>${song.explicita}</p>
-			<p>INTERPRETE: ${song.interprete.nombre}</p>
-			<p>GENERO: ${song.genero.nombre}</p>
 			
 		</div>
 	</body>

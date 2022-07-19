@@ -1,6 +1,27 @@
 
-.bonito{
-	background-color: orange;
-	color:white;
+article {
+	width:70%;
+	margin: 25px auto;
+	border: 1px solid black;
 }
 
+header {
+	background-color: black;
+	color:white;
+	padding:2%;
+	font-size: 120%;
+	font-weight:bolder;
+	text-align: center;
+}
+
+footer {
+	color:red;
+	text-align:center;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-bottom:2%;
+}
