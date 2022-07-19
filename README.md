@@ -2,4 +2,4 @@
 
 Proyecto de demo en Java
 
-Gestión de Canciones
+En la carpeta doc hay imágenes explicativas de la configuración de JSP y los controladores.
