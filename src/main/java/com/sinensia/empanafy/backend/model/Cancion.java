@@ -35,6 +35,8 @@ public class Cancion {
 	private Genero genero;
 	
 	private boolean explicita;
+	private boolean instrumental;
+	private int puntuacion;
 	private int duracion;
 	
 	public Cancion() {
@@ -96,6 +98,22 @@ public class Cancion {
 	public void setExplicita(boolean explicita) {
 		this.explicita = explicita;
 	}
+	
+	public boolean isInstrumental() {
+		return instrumental;
+	}
+
+	public void setInstrumental(boolean instrumental) {
+		this.instrumental = instrumental;
+	}
+	
+	public int getPuntuacion() {
+		return puntuacion;
+	}
+
+	public void setPuntuacion(int puntuacion) {
+		this.puntuacion = puntuacion;
+	}
 
 	public int getDuracion() {
 		return duracion;
@@ -109,7 +127,7 @@ public class Cancion {
 	public String toString() {
 		return "Cancion [ismn=" + ismn + ", titulo=" + titulo + ", fechaCreacion=" + fechaCreacion + ", interprete="
 				+ interprete + ", compositor=" + compositor + ", genero=" + genero + ", explicita=" + explicita
-				+ ", duracion=" + duracion + "]";
+				+ ", instrumental=" + instrumental + ", puntuacion=" + puntuacion + ", duracion=" + duracion + "]";
 	}
 
 }

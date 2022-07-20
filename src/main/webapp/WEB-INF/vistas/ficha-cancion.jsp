@@ -29,6 +29,14 @@
 							<td>${song.duracion}</td>
 						</tr>
 						<tr>
+							<th>Instrumental</th>
+							<td>${song.instrumental}</td>
+						</tr>
+						<tr>
+							<th>Puntuación (de 0 a 10)</th>
+							<td>${song.puntuacion}</td>
+						</tr>
+						<tr>
 							<th>Género</th>
 							<td>${song.genero.nombre}  ${song.genero.observaciones}</td>
 						</tr>
