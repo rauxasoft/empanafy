@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -38,6 +39,9 @@ public class Cancion {
 	private boolean instrumental;
 	private int puntuacion;
 	private int duracion;
+	
+	@Lob
+	private String observaciones;
 	
 	public Cancion() {
 		
@@ -121,6 +125,14 @@ public class Cancion {
 
 	public void setDuracion(int duracion) {
 		this.duracion = duracion;
+	}
+	
+	public String getObservaciones() {
+		return observaciones;
+	}
+
+	public void setObservaciones(String observaciones) {
+		this.observaciones = observaciones;
 	}
 
 	@Override

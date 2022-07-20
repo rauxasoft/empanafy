@@ -16,10 +16,14 @@ public class Compositor {
 	private Integer codigo;
 	
 	private String nombre;
+	private String apellidos;
 	private String nacionalidad;
 	
 	@Temporal(TemporalType.DATE)
 	private Date fechaNacimiento;
+	
+	@Temporal(TemporalType.DATE)
+	private Date fechaDefuncion;
 	
 	public Compositor() {
 		
@@ -41,6 +45,14 @@ public class Compositor {
 		this.nombre = nombre;
 	}
 
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
 	public String getNacionalidad() {
 		return nacionalidad;
 	}
@@ -48,13 +60,21 @@ public class Compositor {
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
-	
+
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public Date getFechaDefuncion() {
+		return fechaDefuncion;
+	}
+
+	public void setFechaDefuncion(Date fechaDefuncion) {
+		this.fechaDefuncion = fechaDefuncion;
 	}
 
 	@Override

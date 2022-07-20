@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<title>Empanafy</title>
@@ -26,7 +27,10 @@
 						</tr>
 						<tr>
 							<th>Duración (segundos)</th>
-							<td>${song.duracion}</td>
+							<td>
+							    <fmt:formatNumber value="${song.duracion / 60 % 60}" maxFractionDigits="0"/>' 
+							    <fmt:formatNumber value="${song.duracion % 60}" maxFractionDigits="0"/>'' 
+							</td>
 						</tr>
 						<tr>
 							<th>Instrumental</th>
@@ -42,11 +46,15 @@
 						</tr>
 						<tr>
 							<th>Intérprete</th>
-							<td>${song.interprete.nombre} (${song.interprete.nacionalidad})</td>
+							<td>${song.interprete.nombre} ${song.interprete.apellidos} (${song.interprete.nacionalidad})</td>
 						</tr>
 						<tr>
 							<th>Compositor</th>
-							<td>${song.compositor.nombre} (${song.compositor.nacionalidad})</td>
+							<td>${song.compositor.nombre} ${song.compositor.apellidos} (${song.compositor.nacionalidad})</td>
+						</tr>
+						<tr>
+							<th>Observaciones</th>
+							<td>${song.observaciones}</td>
 						</tr>
 					</table>
 				</section>

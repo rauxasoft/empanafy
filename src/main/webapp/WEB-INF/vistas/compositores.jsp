@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Empanafy</title>
@@ -16,18 +16,20 @@
 			<thead>
 				<tr>
 					<th>Código</th>
-					<th>Nombre</th>
+					<th>Nombre Completo</th>
 					<th>Nacionalidad</th>
 					<th>Fecha de Nacimiento</th>
+					<th>Fecha de Defunción</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="compositor" items="${compositores}">
 				<tr>
 					<td>${compositor.codigo}</td>
-					<td>${compositor.nombre}</td>
+					<td>${compositor.nombre} ${compositor.apellidos}</td>
 					<td>${compositor.nacionalidad}</td>
 					<td><fmt:formatDate pattern="dd/MM/yyyy" value="${compositor.fechaNacimiento}"/></td>
+					<td><fmt:formatDate pattern="dd/MM/yyyy" value="${compositor.fechaDefuncion}"/></td>
 				</tr>
 				</c:forEach>
 			</tbody>
