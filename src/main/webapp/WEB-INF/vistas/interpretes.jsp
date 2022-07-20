@@ -20,7 +20,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="interprete" items="${interpretes}">
+				<c:forEach var="interprete" items="${gugu}">
 				<tr>
 					<td>${interprete.codigo}</td>
 					<td>${interprete.nombre}</td>

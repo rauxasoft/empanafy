@@ -18,9 +18,9 @@ public class AppInterpreteController {
 	
 	@GetMapping("/empanafy/interpretes")
 	public ModelAndView listadoInterpretes() {
-		ModelAndView mav = new ModelAndView("interpretes"); 			// Indicamos que devuelva la página interpretes.jsp
 		List<Interprete> interpretes = interpreteRepository.findAll(); 	// Obtenemos listado de interpretes
-		mav.addObject("interpretes", interpretes);							// Pasamos el listado de interpretes a la página (con el extraño nombre "tutututu")		
+		ModelAndView mav = new ModelAndView("interpretes"); 			// Indicamos que devuelva la página interpretes.jsp
+		mav.addObject("gugu", interpretes);						// Pasamos el listado de interpretes a la página (con el extraño nombre "tutututu")		
 		return mav;
 	}
 	

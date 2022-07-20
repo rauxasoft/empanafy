@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -46,8 +46,6 @@
 					<c:if test="${song.explicita}"><span>EXPLICITA!</span></c:if>
 				</footer>
 			</article>
-			
-			
 		</div>
 	</body>
 </html>

@@ -26,7 +26,7 @@ Interprete
 Retos opcionales en las vistas (JSP)
 ====================================
 
-1.- Hacer que el tiempo de la canción se muestre en formato 4' 22"
-2.- Hacer que todas las fechas se muestren formateadas como dd/MM/yyyy
-3.- Hacer que los campos numéricos queden alineados a la derecha
+1.- Hacer que todas las fechas se muestren formateadas como dd/MM/yyyy (tenemos un ejemplo en compositores.jsp)
+2.- Hacer que los campos numéricos queden aliniados a la derecha
+3.- Hacer que el tiempo de la canción se muestre en formato 4' 22"
 
