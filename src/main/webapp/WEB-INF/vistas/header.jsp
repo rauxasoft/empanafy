@@ -6,6 +6,7 @@
 			<li class="nav-item"><a class="nav-link" href="/empanafy/interpretes">Listado de Interpretes</a></li>
 			<li class="nav-item"><a class="nav-link" href="/empanafy/canciones">Listado de Canciones</a></li>
 			<li class="nav-item"><a class="nav-link" href="/empanafy/generos">Listado de Géneros</a></li>
+			<li class="nav-item"><a class="nav-link" href="/empanafy/generos-formulario">Alta Genero</a></li>
 		
 <!--  		
 			<li class="nav-item dropdown">
